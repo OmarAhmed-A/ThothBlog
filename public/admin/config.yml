@@ -2,7 +2,7 @@ backend:
   name: git-gateway
   repo: OmarAhmed-A/DadBlog # Path to your GitHub repository
   branch: main # Branch to update (optional; defaults to master)
-  base_url: https://sveltia-cms-auth.omiro755.workers.dev/ # Path to the API endpoint
+  # base_url: https://sveltia-cms-auth.omiro755.workers.dev/ # Path to the API endpoint
 
 media_folder: static/img
 public_folder: /img
