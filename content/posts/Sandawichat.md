@@ -3,7 +3,7 @@ date: 2024-03-07T06:10:00.000Z
 description: Batates
 image: /img/photo-1508313880080-c4bef0730395.avif
 caption: Ta3mya
-title: Sandawichat
+title: Sandawichat masrya
 category:
   - Akl
 tags:
