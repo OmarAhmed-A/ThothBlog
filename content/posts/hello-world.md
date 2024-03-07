@@ -1,6 +1,6 @@
 ---
 date: 2024-03-07T04:59:59.000Z
-image: /img/image.png
+image: /img/scott-graham-5fNmWej4tAA-unsplash.jpg
 draft: false
 title: 'Hello, World!'
 tags:
