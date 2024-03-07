@@ -1,7 +1,7 @@
 ---
 date: 2024-03-07T06:10:00.000Z
 description: Batates
-image: /img/photo-1508313880080-c4bef0730395.avif
+image: /img/hai-nguyen-LSZfNPVZjTw-unsplash.jpg
 caption: Ta3mya
 title: Sandawichat masrya
 category:
