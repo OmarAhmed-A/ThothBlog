@@ -1,5 +1,6 @@
 ---
 date: 2024-03-07T06:10:00.000Z
+slug: omar-ahmed-elsayed
 description: Batates
 image: /img/hai-nguyen-LSZfNPVZjTw-unsplash.jpg
 caption: Ta3mya
