@@ -14,7 +14,7 @@ tags:
 
 # The batates
 
-Egyptian cuisine is a vibrant tapestry of flavors, influenced by millennia of history and cultural exchange. But what about Egyptian breakfast? It's a delicious and essential part of the day, often featuring staples like batates and ta'amiya.
+Egyptian cuisine is a vibrant tapestry of flavors, influenced by millennia of history and cultural exchange. But what about Egyptian breakfast?elicious and essential part of the day, often featuring staples like batates and ta'amiya.
 
 **Batates:**
 
