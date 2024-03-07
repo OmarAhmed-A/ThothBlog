@@ -6,6 +6,21 @@
     <description>Recent content in Tags on Thoth-Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Thu, 07 Mar 2024 04:59:59 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TestTag</title>
+      <link>http://localhost:1313/tags/testtag/</link>
+      <pubDate>Thu, 07 Mar 2024 04:59:59 +0000</pubDate>
+      <guid>http://localhost:1313/tags/testtag/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TestTag2</title>
+      <link>http://localhost:1313/tags/testtag2/</link>
+      <pubDate>Thu, 07 Mar 2024 04:59:59 +0000</pubDate>
+      <guid>http://localhost:1313/tags/testtag2/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

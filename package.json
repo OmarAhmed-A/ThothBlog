@@ -10,10 +10,15 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "tinacms": "^1.5.30"
+    "@tinacms/datalayer": "^1.2.33",
+    "@upstash/redis": "^1.28.4",
+    "tinacms": "^1.6.0",
+    "tinacms-authjs": "^2.0.0",
+    "tinacms-gitprovider-github": "^1.0.4",
+    "upstash-redis-level": "^1.1.1"
   },
   "devDependencies": {
-    "@tinacms/cli": "^1.5.41",
+    "@tinacms/cli": "^1.5.42",
     "@types/node": "^20.11.25"
   }
 }
