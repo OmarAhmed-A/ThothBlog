@@ -4,7 +4,7 @@
   <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Tags | Thoth-Blog</title>
+<title>TestTag2 | Thoth-Blog</title>
 
 <meta name="description" content="">
     <link rel="stylesheet" href="/css/main.css">
@@ -53,7 +53,7 @@
       <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/posts/">Posts</a>
     </li>
     <li class="my-2">
-      <a aria-current="page" class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200 border-zinc-400" href="/tags/">Tags</a>
+      <a class="rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" href="/tags/">Tags</a>
     </li>
     </ul>
   </nav>
@@ -73,34 +73,42 @@
 		<li class="after:content-['❯'] after:ml-4 after:opacity-30 last:after:content-none uppercase">
 			<a href="http://localhost:1313/">Thoth-Blog</a>
 		</li>
+		<li class="after:content-['❯'] after:ml-4 after:opacity-30 last:after:content-none uppercase">
+			<a href="http://localhost:1313/tags/">Tags</a>
+		</li>
 	</ul>
 </div><div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14">
 
   <section class="md:col-span-2">
 
-    <h2 class="text-3xl font-bold mb-10">Tags</h2>
+    <h2 class="text-3xl font-bold mb-10">Test tag2</h2>
 
-    <ul class="grid grid-cols-1 md:grid-cols-2 gap-10 text-2xl"><li class="relative hover:bg-zinc-200 border py-6 px-8 rounded-2xl group">
-      	<a class="insert-link flex items-center space-x-4" href="/tags/testtag/">
-      		<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="group-hover:animate-spin" viewBox="0 0 16 16">
-  				<path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-  				<path d="M13.997 5.17a5 5 0 0 0-8.101-4.09A5 5 0 0 0 1.28 9.342a5 5 0 0 0 8.336 5.109 3.5 3.5 0 0 0 5.201-4.065 3.001 3.001 0 0 0-.822-5.216zm-1-.034a1 1 0 0 0 .668.977 2.001 2.001 0 0 1 .547 3.478 1 1 0 0 0-.341 1.113 2.5 2.5 0 0 1-3.715 2.905 1 1 0 0 0-1.262.152 4 4 0 0 1-6.67-4.087 1 1 0 0 0-.2-1 4 4 0 0 1 3.693-6.61 1 1 0 0 0 .8-.2 4 4 0 0 1 6.48 3.273z"/>
-			</svg>
-      		<span>Test tag</span></a>
-  		</li>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-y-10 gap-x-4">
 
-      <li class="relative hover:bg-zinc-200 border py-6 px-8 rounded-2xl group">
-      	<a class="insert-link flex items-center space-x-4" href="/tags/testtag2/">
-      		<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="group-hover:animate-spin" viewBox="0 0 16 16">
-  				<path d="M8 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-  				<path d="M13.997 5.17a5 5 0 0 0-8.101-4.09A5 5 0 0 0 1.28 9.342a5 5 0 0 0 8.336 5.109 3.5 3.5 0 0 0 5.201-4.065 3.001 3.001 0 0 0-.822-5.216zm-1-.034a1 1 0 0 0 .668.977 2.001 2.001 0 0 1 .547 3.478 1 1 0 0 0-.341 1.113 2.5 2.5 0 0 1-3.715 2.905 1 1 0 0 0-1.262.152 4 4 0 0 1-6.67-4.087 1 1 0 0 0-.2-1 4 4 0 0 1 3.693-6.61 1 1 0 0 0 .8-.2 4 4 0 0 1 6.48 3.273z"/>
-			</svg>
-      		<span>Test tag2</span></a>
-  		</li>
+      <article class="relative group bg-zinc-100 hover:bg-blue-100 rounded-3xl">
+	
+	<a class="insert-link" href="http://localhost:1313/posts/hello-world/"></a>
 
-      
+	<figure class="w-full aspect-video overflow-hidden rounded-3xl"><img class="object-cover group-hover:scale-105 transition duration-500 cursor-pointer" src="http://localhost:1313/img/image_hu25fe18800af2c812d489e040bb1cdd9d_36521_750x0_resize_box_3.png" alt="Hello, World!" width="750" height="344">
+
+	</figure>
+
+	<div class="p-6">
+
+		<time datetime="0001-01-01T00:00:00&#43;00:00">Jan 01, 0001</time>
+
+		<h3 class="my-4 text-2xl font-bold">Hello, World!</h3>
+
+		<p class="text-normal leading-normal text-zinc-500 line-clamp-2"></p>
+
+	</div>
+</article>
     
-    </ul>
+    </div>
+
+    
+
+    <div class="flex items-center mt-10"></div>
   
   </section>
 
@@ -115,15 +123,6 @@
 		<h2 class="font-bold text-xl mb-8">Recent Post</h2>
 
 		<article class="relative group flex flex-row">
-	<a class="insert-link" href="http://localhost:1313/posts/hello-world/"></a>
-	<figure class="basis-1/3 aspect-square overflow-hidden rounded-2xl aspect-square bg-zinc-100"><img class="object-cover group-hover:scale-105 transition duration-500 cursor-pointer" src="http://localhost:1313/img/image_hu25fe18800af2c812d489e040bb1cdd9d_36521_250x250_crop_box_center_3.png" alt="Hello, World!" width="250" height="250">
-
-		
-	</figure>
-	<div class="basis-2/3 self-center ml-4">
-		<h3 class="font-bold group-hover:underline decoration-auto">Hello, World!</h3>
-	</div>
-</article><article class="relative group flex flex-row">
 	<a class="insert-link" href="http://localhost:1313/posts/test/"></a>
 	<figure class="basis-1/3 aspect-square overflow-hidden rounded-2xl aspect-square bg-zinc-100"><img class="object-cover group-hover:scale-105 transition duration-500 cursor-pointer" src="http://localhost:1313/img/mail_hu25b56d1d138e74dc06ed102310723ceb_50430_250x250_crop_q75_box_center.jpg" alt="test" width="250" height="250">
 
@@ -131,6 +130,15 @@
 	</figure>
 	<div class="basis-2/3 self-center ml-4">
 		<h3 class="font-bold group-hover:underline decoration-auto">test</h3>
+	</div>
+</article><article class="relative group flex flex-row">
+	<a class="insert-link" href="http://localhost:1313/posts/hello-world/"></a>
+	<figure class="basis-1/3 aspect-square overflow-hidden rounded-2xl aspect-square bg-zinc-100"><img class="object-cover group-hover:scale-105 transition duration-500 cursor-pointer" src="http://localhost:1313/img/image_hu25fe18800af2c812d489e040bb1cdd9d_36521_250x250_crop_box_center_3.png" alt="Hello, World!" width="250" height="250">
+
+		
+	</figure>
+	<div class="basis-2/3 self-center ml-4">
+		<h3 class="font-bold group-hover:underline decoration-auto">Hello, World!</h3>
 	</div>
 </article>
 		
