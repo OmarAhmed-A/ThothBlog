@@ -3,7 +3,7 @@ name: GitHub Pages
 on:
   push:
     branches:
-      - main  # Set a branch to deploy
+      - main # Set a branch to deploy
   pull_request:
 
 jobs:
@@ -14,29 +14,42 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+          submodules: true # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
 
-      - name: Cache node modules
-        uses: actions/cache@v2
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          node-version: '20'
 
-      - name: Install dependencies
-        run: npm install
+      - name: Get yarn cache
+        id: yarn-cache
+        run: echo "YARN_CACHE_DIR=$(yarn cache dir)" >> "${GITHUB_OUTPUT}"
+
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.yarn-cache.outputs.YARN_CACHE_DIR }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - run: yarn install --frozen-lockfile
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
-          hugo-version: 'latest'
+          hugo-version: "latest"
           extended: true
 
-      - name: Build
-        run: |
-          tinacms build && hugo --minify
+      - name: Build TinaCMS
+        env:
+          TINA_PUBLIC_CLIENT_ID: ${{ secrets.TINA_PUBLIC_CLIENT_ID }}
+          TINA_TOKEN: ${{ secrets.TINA_TOKEN }}
+        run: npx tinacms build
+
+      - name: Build Hugo
+        run: hugo --minify
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
