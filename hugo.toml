@@ -1,4 +1,4 @@
-baseURL = 'https://thoth-blog.netlify.app'
+baseURL = 'https://omarahmed-a.github.io/ThothBlog/'
 languageCode = 'en-us'
 title = 'Thoth-Blog'
 theme = 'pehtheme'
