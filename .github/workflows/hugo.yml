@@ -68,7 +68,7 @@ jobs:
 
       - name: Install dependencies
         if: steps.cache-yarn.outputs.cache-hit != 'true'
-        run: yarn install --frozen-lockfile
+        run: yarn install
 
       - name: Build TinaCMS
         env:
