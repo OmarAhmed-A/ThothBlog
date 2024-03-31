@@ -77,6 +77,13 @@ export default defineConfig({
       },
     ],
   },
+  search: {
+    tina: {
+      indexerToken: process.env.SEARCH_TOKEN,
+    },
+    indexBatchSize: 100,
+    maxSearchIndexFieldLength: 100,
+  },
 });
 // ---
 // title: "Exoplanets: Hunting for Earth's Cosmic Cousins"
