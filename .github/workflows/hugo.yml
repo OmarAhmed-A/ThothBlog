@@ -40,15 +40,11 @@ jobs:
         with:
           submodules: recursive
 
-      - name: Get hugo cache
-        id: hugo-cache
-        run: echo "HUGO_CACHE_DIR=$(hugo cache dir)" >> "${GITHUB_OUTPUT}"
-
       - name: Cache Hugo
         id: cache-hugo
         uses: actions/cache@v4
         with:
-          path: ${{ steps.hugo-cache.outputs.HUGO_CACHE_DIR }}
+          path: /home/runner/.cache/hugo/${{ env.HUGO_VERSION }}
           key: ${{ runner.os }}-hugo-${{ env.HUGO_VERSION }}
 
       - name: Install Hugo CLI
@@ -56,7 +52,6 @@ jobs:
         run: |
           wget -O ${{ runner.temp }}/hugo/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${{ env.HUGO_VERSION }}/hugo_extended_${{ env.HUGO_VERSION }}_Linux-64bit.deb
           sudo dpkg -i ${{ runner.temp }}/hugo/hugo.deb
-
 
       - name: Setup Pages
         id: pages
@@ -72,7 +67,7 @@ jobs:
           path: ${{ steps.yarn-cache.outputs.YARN_CACHE_DIR }}
           key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.os }}-yarn-
+            ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
 
       - name: Install dependencies
         if: steps.cache-yarn.outputs.cache-hit != 'true'
