@@ -2,6 +2,7 @@
 date: 2024-03-05T22:00:00.000Z
 description: TESTTTTTT
 image: /img/mail.jpg
+caption: add caption test
 draft: false
 title: test
 ---
