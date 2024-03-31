@@ -40,17 +40,20 @@ jobs:
         with:
           submodules: recursive
 
+      - name: Get hugo cache
+        id: hugo-cache
+        run: echo "HUGO_CACHE_DIR=$(hugo cache dir)" >> "${GITHUB_OUTPUT}"
+
       - name: Cache Hugo
         id: cache-hugo
         uses: actions/cache@v4
         with:
-          path: ${{ runner.temp }}/hugo
+          path: ${{ steps.hugo-cache.outputs.HUGO_CACHE_DIR }}
           key: ${{ runner.os }}-hugo-${{ env.HUGO_VERSION }}
 
       - name: Install Hugo CLI
         if: steps.cache-hugo.outputs.cache-hit != 'true'
         run: |
-          mkdir -p ${{ runner.temp }}/hugo
           wget -O ${{ runner.temp }}/hugo/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${{ env.HUGO_VERSION }}/hugo_extended_${{ env.HUGO_VERSION }}_Linux-64bit.deb
           sudo dpkg -i ${{ runner.temp }}/hugo/hugo.deb
 
