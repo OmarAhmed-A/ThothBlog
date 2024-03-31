@@ -9,6 +9,7 @@ const branch =
 
 export default defineConfig({
   branch,
+  
 
   // Get this from tina.io
   clientId: process.env.NEXT_PUBLIC_TINA_CLIENT_ID,
@@ -18,6 +19,7 @@ export default defineConfig({
   build: {
     outputFolder: "admin",
     publicFolder: "static",
+    basePath: "/ThothBlog",
   },
   media: {
     tina: {
