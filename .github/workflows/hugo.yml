@@ -59,12 +59,14 @@ jobs:
         uses: actions/configure-pages@v5
             
       - name: Setup Node
+        id: node
         uses: actions/setup-node@v4
         with:
           node-version: 20
           cache: "yarn"
 
       - name: Install yarn dependencies
+        if: steps.node.outputs.cache-hit != 'true'
         run: yarn install --frozen-lockfile
 
       - name: Build TinaCMS
