@@ -57,18 +57,18 @@ jobs:
         id: pages
         uses: actions/configure-pages@v5
 
-      - name: Cache Node Modules
-        id: cache-npm
+      - name: Cache Yarn packages
+        id: cache-yarn
         uses: actions/cache@v4
         with:
-          path: node_modules
-          key: ${{ runner.OS }}-npm-${{ hashFiles('**/package-lock.json') }}
+          path: ~/.yarn/cache
+          key: ${{ runner.OS }}-yarn-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
-            ${{ runner.OS }}-npm-
+            ${{ runner.OS }}-yarn-
 
-      - name: Install Node.js dependencies
-        if: steps.cache-npm.outputs.cache-hit != 'true'
-        run: npm ci
+      - name: Install dependencies
+        if: steps.cache-yarn.outputs.cache-hit != 'true'
+        run: yarn install --frozen-lockfile
 
       - name: Build TinaCMS
         env:
