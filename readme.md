@@ -2,6 +2,8 @@
 
 This is a simple Hugo blog created for my dad, powered by TinaCMS as the backend.
 
+[![Deploy Hugo site to Pages](https://github.com/OmarAhmed-A/ThothBlog/actions/workflows/hugo.yml/badge.svg)](https://github.com/OmarAhmed-A/ThothBlog/actions/workflows/hugo.yml)
+
 ## Description
 
 DadBlog is a personal blog where my dad can share his thoughts, stories, and experiences. It is built using Hugo, a static site generator, and utilizes TinaCMS as the content management system.
