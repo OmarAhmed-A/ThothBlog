@@ -22,5 +22,19 @@
       <guid>http://localhost:1313/tags/testtag2/</guid>
       <description></description>
     </item>
+    <item>
+      <title>Batates</title>
+      <link>http://localhost:1313/tags/batates/</link>
+      <pubDate>Wed, 06 Mar 2024 06:10:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/batates/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ta3mya</title>
+      <link>http://localhost:1313/tags/ta3mya/</link>
+      <pubDate>Wed, 06 Mar 2024 06:10:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/ta3mya/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

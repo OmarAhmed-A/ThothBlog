@@ -1,4 +1,4 @@
-baseURL = 'https://omarahmed-a.github.io/ThothBlog/'
+baseURL = 'https://thoth-blog.omarx.uk'
 languageCode = 'en-us'
 title = 'Thoth-Blog'
 theme = 'pehtheme'
